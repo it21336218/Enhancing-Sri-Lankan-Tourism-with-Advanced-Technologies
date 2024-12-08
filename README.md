@@ -8,6 +8,17 @@ Our research focuses on digitally transforming Sri Lanka's tourism sector by int
 
 ---
 
+# **Git-repo link **
+https://github.com/it21336218/Enhancing-Sri-Lankan-Tourism-with-Advanced-Technologies
+
+---
+
+# **Research Problem**
+
+Sri Lanka's tourism industry is struggling to adapt to post-pandemic challenges, natural disasters, and intense global competition, with traditional methods failing to meet the expectations of modern travelers who seek immersive, personalized, and real-time experiences. The critical issue lies in the absence of advanced technological solutions, such as augmented reality (AR), artificial intelligence (AI), and real-time data analytics, tailored to enhance visitor experiences, optimize operations, and ensure safety, thus limiting the industry's ability to attract and retain tourists effectively.
+
+---
+
 ## **System Diagram**
 ![System Diagram](https://github.com/user-attachments/assets/04d3899c-f77d-4c7b-8f69-abb69ccc474e)
 
