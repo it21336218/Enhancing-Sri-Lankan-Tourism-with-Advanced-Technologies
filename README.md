@@ -43,25 +43,46 @@ Sri Lanka's tourism industry is struggling to adapt to post-pandemic challenges,
 # **Individual Contribution**
 
 ---
+## **Description**  
+The AR Tour Guide app delivers **real-time augmented reality overlays**, providing users with personalized historical and cultural narratives. Powered by AI-driven virtual guides, the application dynamically showcases nearby attractions based on geolocation. It integrates **gamification features**, offering interactive challenges and rewards to enhance user engagement and exploration of points of interest.
 
-## **IT21347962 | Siribaddana K. (AR Tour Guide)**
+---
 
-**Description:**  
-Real-time AR overlays provide personalized historical and cultural narratives with AI-driven virtual guides. Gamification elements enhance engagement through interactive challenges. Geolocation services dynamically showcase nearby attractions, enabling users to explore points of interest based on their location.
+## **Features**
+- Real-time AR overlays with historical and cultural narratives.
+- AI-driven virtual guides for personalized user experiences.
+- Geolocation-based recommendations for nearby attractions.
+- Gamification features to enhance user engagement.
+- Dynamic exploration of points of interest.
 
-### **Component Diagram**  
+---
+
+## **Component Diagram**
 ![Component Diagram](https://github.com/user-attachments/assets/e0e8046b-80c9-44fe-8799-c4bbce847030)
 
-### **Technologies and Dependencies**
+---
 
-- **Unity**
-- **React Native**
-- **Google Geolocation Services**
-- **Python**
-- **Node.js**
-- Libraries:  
-  - Pandas  
-  - NumPy  
+## **Technologies and Dependencies**
+
+### **Frontend**
+- **Unity**: Augmented reality rendering and interactive experiences.
+- **React Native**: Cross-platform mobile application development.
+
+### **Backend**
+- **Python**: AI and ML processing, including content generation and image classification.
+- **Node.js**: API management and backend services.
+
+### **Services**
+- **Google Geolocation API**: For fetching location-based data.
+- **Google Generative AI (Gemini)**: For generating AI-driven content narratives.
+- **OpenAI CLIP**: For image classification and feature extraction.
+
+### **Libraries**
+- **NumPy**: For efficient numerical operations.
+- **Pandas**: For data manipulation and analysis.
+- **Torch**: For training and running AI models.
+- **Albumentations**: For advanced data augmentation in image processing.
+- **Matplotlib**: For data visualization.
 
 ---
 
