@@ -1,5 +1,3 @@
-Here’s an updated version of the README with proper indentation and formatting for better readability on GitHub:
-
 ---
 
 # **Introduction**
@@ -123,5 +121,3 @@ A project designed to streamline travel management while preserving memories by 
 - **Google Photos API**
 
 ---
-
-This formatting ensures clarity, proper spacing, and a clean structure for easier navigation and comprehension on GitHub.
