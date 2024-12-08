@@ -6,3 +6,13 @@ Sri Lanka, known for its cultural heritage and natural beauty, faces challenges 
  # System diagram
 ![image](https://github.com/user-attachments/assets/04d3899c-f77d-4c7b-8f69-abb69ccc474e)
 
+# Used technologies and dependencies 
+
+python 
+react-native
+node.js 
+unity 
+pytorch 
+vs code 
+
+
