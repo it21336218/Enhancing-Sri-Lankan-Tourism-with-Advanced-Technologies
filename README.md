@@ -16,6 +16,9 @@ python
 ,vs code 
 ,pandas
 ,numpy
+,matpolib libries 
+,seaborn 
+
 
 
 # IT21347962 | siribaddana k. (Ar tourgiude)
@@ -24,19 +27,18 @@ Real-time AR overlays provide personalized historical and cultural narratives wi
 
 # component diagram
 
-![alt text](image-1.png)
+![image](https://github.com/user-attachments/assets/e0e8046b-80c9-44fe-8799-c4bbce847030)
 
 
 # Used technologies and dependencies 
 
-unity 
-react=native 
-(google) geo location services 
-python 
+unity
+,react-native 
+,(google) geo location services 
+,python 
 
 
-,matpolib libries 
-,seaborn 
+
 
 
 
