@@ -43,6 +43,8 @@ Sri Lanka's tourism industry is struggling to adapt to post-pandemic challenges,
 # **Individual Contribution**
 
 ---
+
+## **IT21347962 | Siribaddana K. (AR Tour Guide)**
 ## **Description**  
 The AR Tour Guide app delivers **real-time augmented reality overlays**, providing users with personalized historical and cultural narratives. Powered by AI-driven virtual guides, the application dynamically showcases nearby attractions based on geolocation. It integrates **gamification features**, offering interactive challenges and rewards to enhance user engagement and exploration of points of interest.
 
