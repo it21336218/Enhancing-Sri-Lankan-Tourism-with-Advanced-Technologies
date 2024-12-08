@@ -88,26 +88,36 @@ The AR Tour Guide app delivers **real-time augmented reality overlays**, providi
 
 ---
 
-## **IT21201882 | Senarathne S. (Tourist Education Engagement Function)**
+## IT21201882 | Senarathne S. (Tourist Education Engagement Function)
 
-**Description:**  
-Interactive Tourist Education System for Sri Lankan Tourism. Tourists can use their voice to navigate the app and access details. Feedback features make the app informative and enjoyable for exploring Sri Lanka.
+Description:  
+This system is designed to provide tourists visiting Sri Lanka with a personalized and engaging learning experience. It helps users connect more deeply with the island’s rich culture, history, and current events through interactive features. The system combines interactive quizzes, fun facts, interesting trivia, and real-time updates about special events or festivals to create a comprehensive educational tool tailored to each visitor's journey. Additionally, it allows users to share their feedback in various formats, including text, audio, or video, enhancing the interactive experience while enabling continuous system improvement based on user input.
 
-### **Component Diagram**  
+### Component Diagram  
 ![Component Diagram](https://github.com/user-attachments/assets/433a2feb-c351-4455-bd11-c665c96a9a58)
 
-### **Technologies and Dependencies**
+### Technologies and Dependencies
 
-- **Unity**
-- **React Native**
-- **Python**
-- **TensorFlow**
-- **MoviePy Editor**
-- **Voice Recognition SDKs**
-- **Node.js**
-- Libraries:  
-  - Pandas  
-  - NumPy  
+- Python
+- Hugging Face Transformers
+- Hugging Face Datasets
+- Evaluate Library
+- NumPy
+- Pandas
+- CSV
+- TensorFlow/OneDNN
+- MoviePy
+- SpeechRecognition
+- FFmpeg
+- Flask
+- Flask-CORS
+- Tempfile
+- OS Module
+- Subprocess
+- Pydub (Optional for splitting audio)
+- OpenAI Whisper (Optional for offline transcription)
+- PyTorch (Optional for GPU support with Whisper)
+
 
 ---
 
