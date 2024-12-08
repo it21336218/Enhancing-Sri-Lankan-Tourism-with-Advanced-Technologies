@@ -14,5 +14,11 @@ python
 ,unity 
 ,pytorch 
 ,vs code 
+,pandas
+,numpy
+,matpolib libries 
+,seaborn 
+
+
 
 
