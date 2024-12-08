@@ -4,5 +4,5 @@ Sri Lanka, known for its cultural heritage and natural beauty, faces challenges 
 
 
 #System diagram
+![image](https://github.com/user-attachments/assets/04d3899c-f77d-4c7b-8f69-abb69ccc474e)
 
-![image](https://github.com/user-attachments/assets/16efd37d-1ed0-47da-86ed-c5b4d591fbbe
