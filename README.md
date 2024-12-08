@@ -8,7 +8,7 @@ Our research focuses on digitally transforming Sri Lanka's tourism sector by int
 
 ---
 
-# **Git-repo link **
+# **Git-repo link**
 https://github.com/it21336218/Enhancing-Sri-Lankan-Tourism-with-Advanced-Technologies
 
 ---
