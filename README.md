@@ -16,6 +16,25 @@ python
 ,vs code 
 ,pandas
 ,numpy
+
+
+# IT21347962 | siribaddana k. (Ar tourgiude)
+
+Real-time AR overlays provide personalized historical and cultural narratives with AI-driven virtual guides. Gamification elements enhance engagement through interactive challenges. Geolocation services dynamically showcase nearby attractions, enabling users to explore points of interest based on their location.
+
+# component diagram
+
+![alt text](image-1.png)
+
+
+# Used technologies and dependencies 
+
+unity 
+react=native 
+(google) geo location services 
+python 
+
+
 ,matpolib libries 
 ,seaborn 
 
