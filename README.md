@@ -9,10 +9,10 @@ Sri Lanka, known for its cultural heritage and natural beauty, faces challenges 
 # Used technologies and dependencies 
 
 python 
-react-native
-node.js 
-unity 
-pytorch 
-vs code 
+,react-native
+,node.js 
+,unity 
+,pytorch 
+,vs code 
 
 
