@@ -1,0 +1,304 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.virostarterkit"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+9        android:targetSdkVersion="34" />
+10    <!-- Query ARCore package -->
+11    <queries>
+11-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:5:5-7:15
+12        <package android:name="com.google.ar.core" />
+12-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:6:9-54
+12-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:6:18-51
+13        <package android:name="com.android.vending" />
+13-->[:arcore_client] C:\dev\frontend\starter-kit\node_modules\@reactvision\react-viro\android\arcore_client\build\.transforms\a84cd0732a118e1b7768cd3ae57200c6\transformed\jetified-core-1.43.0\AndroidManifest.xml:22:9-55
+13-->[:arcore_client] C:\dev\frontend\starter-kit\node_modules\@reactvision\react-viro\android\arcore_client\build\.transforms\a84cd0732a118e1b7768cd3ae57200c6\transformed\jetified-core-1.43.0\AndroidManifest.xml:22:18-52
+14
+15        <intent>
+15-->[:arcore_client] C:\dev\frontend\starter-kit\node_modules\@reactvision\react-viro\android\arcore_client\build\.transforms\a84cd0732a118e1b7768cd3ae57200c6\transformed\jetified-core-1.43.0\AndroidManifest.xml:24:9-26:18
+16            <action android:name="com.google.android.play.core.install.BIND_INSTALL_SERVICE" />
+16-->[:arcore_client] C:\dev\frontend\starter-kit\node_modules\@reactvision\react-viro\android\arcore_client\build\.transforms\a84cd0732a118e1b7768cd3ae57200c6\transformed\jetified-core-1.43.0\AndroidManifest.xml:25:13-96
+16-->[:arcore_client] C:\dev\frontend\starter-kit\node_modules\@reactvision\react-viro\android\arcore_client\build\.transforms\a84cd0732a118e1b7768cd3ae57200c6\transformed\jetified-core-1.43.0\AndroidManifest.xml:25:21-93
+17        </intent>
+18        <intent>
+18-->[androidx.camera:camera-extensions:1.1.0] C:\Users\kanee\.gradle\caches\transforms-3\a2cf35269fb09d435935fa8cc9596b1b\transformed\jetified-camera-extensions-1.1.0\AndroidManifest.xml:25:9-27:18
+19            <action android:name="androidx.camera.extensions.action.VENDOR_ACTION" />
+19-->[androidx.camera:camera-extensions:1.1.0] C:\Users\kanee\.gradle\caches\transforms-3\a2cf35269fb09d435935fa8cc9596b1b\transformed\jetified-camera-extensions-1.1.0\AndroidManifest.xml:26:13-86
+19-->[androidx.camera:camera-extensions:1.1.0] C:\Users\kanee\.gradle\caches\transforms-3\a2cf35269fb09d435935fa8cc9596b1b\transformed\jetified-camera-extensions-1.1.0\AndroidManifest.xml:26:21-83
+20        </intent>
+21    </queries> <!-- Required permissions -->
+22    <uses-permission android:name="android.permission.INTERNET" />
+22-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:10:5-67
+22-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:10:22-64
+23    <uses-permission android:name="android.permission.CAMERA" />
+23-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:11:5-65
+23-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:11:22-62
+24    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+24-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:12:5-79
+24-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:12:22-77
+25    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+25-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:13:5-80
+25-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:13:22-78
+26    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+26-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:14:5-78
+26-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:14:22-76
+27    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- Camera and AR-related features -->
+27-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:15:5-80
+27-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:15:22-78
+28    <uses-feature android:name="android.hardware.camera" />
+28-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:18:5-60
+28-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:18:19-57
+29    <uses-feature
+29-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:19:5-94
+30        android:name="android.hardware.camera.autofocus"
+30-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:19:19-67
+31        android:required="false" />
+31-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:19:68-92
+32    <uses-feature
+32-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:20:5-78
+33        android:glEsVersion="0x00030000"
+33-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:20:19-51
+34        android:required="true" />
+34-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:20:52-76
+35    <uses-feature
+35-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:21:5-98
+36        android:name="android.hardware.sensor.accelerometer"
+36-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:21:19-71
+37        android:required="true" />
+37-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:21:72-96
+38    <uses-feature
+38-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:22:5-94
+39        android:name="android.hardware.sensor.gyroscope"
+39-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:22:19-67
+40        android:required="true" />
+40-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:22:68-92
+41    <uses-feature android:name="android.hardware.camera.ar" />
+41-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:23:5-63
+41-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:23:19-60
+42    <uses-feature android:name="android.hardware.location.gps" />
+42-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:24:5-65
+42-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:24:19-63
+43    <!--
+44    This manifest file is used only by Gradle to configure debug-only capabilities
+45    for React Native Apps.
+46    -->
+47    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+47-->[com.facebook.react:react-android:0.73.3] C:\Users\kanee\.gradle\caches\transforms-3\ff34738e7fb960ce73fd0d6cf687f2a8\transformed\jetified-react-android-0.73.3-debug\AndroidManifest.xml:16:5-78
+47-->[com.facebook.react:react-android:0.73.3] C:\Users\kanee\.gradle\caches\transforms-3\ff34738e7fb960ce73fd0d6cf687f2a8\transformed\jetified-react-android-0.73.3-debug\AndroidManifest.xml:16:22-75
+48    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+48-->[com.facebook.flipper:flipper:0.201.0] C:\Users\kanee\.gradle\caches\transforms-3\9b2c28bd5719adb7e465469e2ca76c12\transformed\jetified-flipper-0.201.0\AndroidManifest.xml:14:5-76
+48-->[com.facebook.flipper:flipper:0.201.0] C:\Users\kanee\.gradle\caches\transforms-3\9b2c28bd5719adb7e465469e2ca76c12\transformed\jetified-flipper-0.201.0\AndroidManifest.xml:14:22-73
+49
+50    <meta-data
+50-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:48:9-81
+51        android:name="com.google.ar.core"
+51-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:48:20-53
+52        android:value="optional" /> <!-- Required for vibration feedback when the trigger action is performed. -->
+52-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:48:54-78
+53    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+53-->[:viro_renderer] C:\dev\frontend\starter-kit\node_modules\@reactvision\react-viro\android\viro_renderer\build\.transforms\b64e98e36347ea21e3530201ec223fa2\transformed\jetified-viro_renderer-release\AndroidManifest.xml:13:5-79
+53-->[:viro_renderer] C:\dev\frontend\starter-kit\node_modules\@reactvision\react-viro\android\viro_renderer\build\.transforms\b64e98e36347ea21e3530201ec223fa2\transformed\jetified-viro_renderer-release\AndroidManifest.xml:13:22-76
+54    <uses-permission android:name="android.permission.VIBRATE" /> <!-- Required for Recording -->
+54-->[:viro_renderer] C:\dev\frontend\starter-kit\node_modules\@reactvision\react-viro\android\viro_renderer\build\.transforms\b64e98e36347ea21e3530201ec223fa2\transformed\jetified-viro_renderer-release\AndroidManifest.xml:14:5-66
+54-->[:viro_renderer] C:\dev\frontend\starter-kit\node_modules\@reactvision\react-viro\android\viro_renderer\build\.transforms\b64e98e36347ea21e3530201ec223fa2\transformed\jetified-viro_renderer-release\AndroidManifest.xml:14:22-63
+55    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- Required to detect viewer insertion. -->
+55-->[:viro_renderer] C:\dev\frontend\starter-kit\node_modules\@reactvision\react-viro\android\viro_renderer\build\.transforms\b64e98e36347ea21e3530201ec223fa2\transformed\jetified-viro_renderer-release\AndroidManifest.xml:18:5-71
+55-->[:viro_renderer] C:\dev\frontend\starter-kit\node_modules\@reactvision\react-viro\android\viro_renderer\build\.transforms\b64e98e36347ea21e3530201ec223fa2\transformed\jetified-viro_renderer-release\AndroidManifest.xml:18:22-68
+56    <uses-permission android:name="android.permission.NFC" /> <!-- Indicates use of Android's VR-mode, available only on Android N+. -->
+56-->[:viro_renderer] C:\dev\frontend\starter-kit\node_modules\@reactvision\react-viro\android\viro_renderer\build\.transforms\b64e98e36347ea21e3530201ec223fa2\transformed\jetified-viro_renderer-release\AndroidManifest.xml:21:5-62
+56-->[:viro_renderer] C:\dev\frontend\starter-kit\node_modules\@reactvision\react-viro\android\viro_renderer\build\.transforms\b64e98e36347ea21e3530201ec223fa2\transformed\jetified-viro_renderer-release\AndroidManifest.xml:21:22-59
+57    <uses-feature
+57-->[:viro_renderer] C:\dev\frontend\starter-kit\node_modules\@reactvision\react-viro\android\viro_renderer\build\.transforms\b64e98e36347ea21e3530201ec223fa2\transformed\jetified-viro_renderer-release\AndroidManifest.xml:34:5-36:36
+58        android:name="android.software.vr.mode"
+58-->[:viro_renderer] C:\dev\frontend\starter-kit\node_modules\@reactvision\react-viro\android\viro_renderer\build\.transforms\b64e98e36347ea21e3530201ec223fa2\transformed\jetified-viro_renderer-release\AndroidManifest.xml:35:9-48
+59        android:required="false" /> <!-- Indicates use of VR features that are available only on Daydream-ready devices. -->
+59-->[:viro_renderer] C:\dev\frontend\starter-kit\node_modules\@reactvision\react-viro\android\viro_renderer\build\.transforms\b64e98e36347ea21e3530201ec223fa2\transformed\jetified-viro_renderer-release\AndroidManifest.xml:36:9-33
+60    <uses-feature
+60-->[:viro_renderer] C:\dev\frontend\starter-kit\node_modules\@reactvision\react-viro\android\viro_renderer\build\.transforms\b64e98e36347ea21e3530201ec223fa2\transformed\jetified-viro_renderer-release\AndroidManifest.xml:38:5-40:36
+61        android:name="android.hardware.vr.high_performance"
+61-->[:viro_renderer] C:\dev\frontend\starter-kit\node_modules\@reactvision\react-viro\android\viro_renderer\build\.transforms\b64e98e36347ea21e3530201ec223fa2\transformed\jetified-viro_renderer-release\AndroidManifest.xml:39:9-60
+62        android:required="false" />
+62-->[:viro_renderer] C:\dev\frontend\starter-kit\node_modules\@reactvision\react-viro\android\viro_renderer\build\.transforms\b64e98e36347ea21e3530201ec223fa2\transformed\jetified-viro_renderer-release\AndroidManifest.xml:40:9-33
+63
+64    <permission
+64-->[androidx.core:core:1.9.0] C:\Users\kanee\.gradle\caches\transforms-3\13659b94c66de92d98d7f8af61234b95\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+65        android:name="com.virostarterkit.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+65-->[androidx.core:core:1.9.0] C:\Users\kanee\.gradle\caches\transforms-3\13659b94c66de92d98d7f8af61234b95\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+66        android:protectionLevel="signature" />
+66-->[androidx.core:core:1.9.0] C:\Users\kanee\.gradle\caches\transforms-3\13659b94c66de92d98d7f8af61234b95\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+67
+68    <uses-permission android:name="com.virostarterkit.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+68-->[androidx.core:core:1.9.0] C:\Users\kanee\.gradle\caches\transforms-3\13659b94c66de92d98d7f8af61234b95\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+68-->[androidx.core:core:1.9.0] C:\Users\kanee\.gradle\caches\transforms-3\13659b94c66de92d98d7f8af61234b95\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+69
+70    <application
+70-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:26:5-59:19
+71        android:name="com.virostarterkit.MainApplication"
+71-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:27:9-40
+72        android:allowBackup="false"
+72-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:31:9-36
+73        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+73-->[androidx.core:core:1.9.0] C:\Users\kanee\.gradle\caches\transforms-3\13659b94c66de92d98d7f8af61234b95\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+74        android:debuggable="true"
+75        android:extractNativeLibs="false"
+76        android:icon="@mipmap/ic_launcher"
+76-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:29:9-43
+77        android:label="@string/app_name"
+77-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:28:9-41
+78        android:roundIcon="@mipmap/ic_launcher_round"
+78-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:30:9-54
+79        android:supportsRtl="true"
+79-->[:react_viro] C:\dev\frontend\starter-kit\node_modules\@reactvision\react-viro\android\react_viro\build\.transforms\89031c2dba5e8e1d366adc77a6c6702f\transformed\jetified-react_viro-release\AndroidManifest.xml:13:9-35
+80        android:theme="@style/AppTheme"
+80-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:32:9-40
+81        android:usesCleartextTraffic="true" >
+81-->C:\dev\frontend\starter-kit\android\app\src\debug\AndroidManifest.xml:6:9-44
+82        <activity
+82-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:34:9-45:20
+83            android:name="com.virostarterkit.MainActivity"
+83-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:35:13-41
+84            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+84-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:37:13-122
+85            android:exported="true"
+85-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:40:13-36
+86            android:label="@string/app_name"
+86-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:36:13-45
+87            android:launchMode="singleTask"
+87-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:38:13-44
+88            android:windowSoftInputMode="adjustResize" >
+88-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:39:13-55
+89            <intent-filter>
+89-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:41:13-44:29
+90                <action android:name="android.intent.action.MAIN" />
+90-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:42:17-69
+90-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:42:25-66
+91
+92                <category android:name="android.intent.category.LAUNCHER" />
+92-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:43:17-77
+92-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:43:27-74
+93            </intent-filter>
+94        </activity> <!-- ARCore and VR metadata -->
+95        <meta-data
+95-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:48:9-81
+96            android:name="com.google.ar.core"
+96-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:48:20-53
+97            android:value="optional" />
+97-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:48:54-78
+98        <meta-data
+98-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:49:9-100
+99            android:name="com.samsung.android.vr.application.mode"
+99-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:49:20-74
+100            android:value="vr_only" /> <!-- ✅ Added CameraX Configuration for VisionCamera -->
+100-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:49:75-98
+101        <meta-data
+101-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:52:9-54:53
+102            android:name="androidx.camera.defaultConfig"
+102-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:53:13-57
+103            android:resource="@xml/camera_config" />
+103-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:54:13-50
+104        <meta-data
+104-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:55:9-57:40
+105            android:name="androidx.camera.useCaseBackpressureStrategy"
+105-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:56:13-71
+106            android:value="BLOCKING" />
+106-->C:\dev\frontend\starter-kit\android\app\src\main\AndroidManifest.xml:57:13-37
+107
+108        <activity
+108-->[com.facebook.react:react-android:0.73.3] C:\Users\kanee\.gradle\caches\transforms-3\ff34738e7fb960ce73fd0d6cf687f2a8\transformed\jetified-react-android-0.73.3-debug\AndroidManifest.xml:19:9-21:40
+109            android:name="com.facebook.react.devsupport.DevSettingsActivity"
+109-->[com.facebook.react:react-android:0.73.3] C:\Users\kanee\.gradle\caches\transforms-3\ff34738e7fb960ce73fd0d6cf687f2a8\transformed\jetified-react-android-0.73.3-debug\AndroidManifest.xml:20:13-77
+110            android:exported="false" />
+110-->[com.facebook.react:react-android:0.73.3] C:\Users\kanee\.gradle\caches\transforms-3\ff34738e7fb960ce73fd0d6cf687f2a8\transformed\jetified-react-android-0.73.3-debug\AndroidManifest.xml:21:13-37
+111        <activity
+111-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\kanee\.gradle\caches\transforms-3\19ec269da49c6c76309942cfa013a60d\transformed\jetified-play-services-base-17.5.0\AndroidManifest.xml:23:9-26:75
+112            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+112-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\kanee\.gradle\caches\transforms-3\19ec269da49c6c76309942cfa013a60d\transformed\jetified-play-services-base-17.5.0\AndroidManifest.xml:24:13-79
+113            android:exported="false"
+113-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\kanee\.gradle\caches\transforms-3\19ec269da49c6c76309942cfa013a60d\transformed\jetified-play-services-base-17.5.0\AndroidManifest.xml:25:13-37
+114            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+114-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\kanee\.gradle\caches\transforms-3\19ec269da49c6c76309942cfa013a60d\transformed\jetified-play-services-base-17.5.0\AndroidManifest.xml:26:13-72
+115
+116        <meta-data
+116-->[com.google.android.gms:play-services-basement:17.5.0] C:\Users\kanee\.gradle\caches\transforms-3\4343b2ae69420088cd050005b2aafd9c\transformed\jetified-play-services-basement-17.5.0\AndroidManifest.xml:23:9-25:69
+117            android:name="com.google.android.gms.version"
+117-->[com.google.android.gms:play-services-basement:17.5.0] C:\Users\kanee\.gradle\caches\transforms-3\4343b2ae69420088cd050005b2aafd9c\transformed\jetified-play-services-basement-17.5.0\AndroidManifest.xml:24:13-58
+118            android:value="@integer/google_play_services_version" /> <!-- The minimal version code of ARCore APK required for an app using this SDK. -->
+118-->[com.google.android.gms:play-services-basement:17.5.0] C:\Users\kanee\.gradle\caches\transforms-3\4343b2ae69420088cd050005b2aafd9c\transformed\jetified-play-services-basement-17.5.0\AndroidManifest.xml:25:13-66
+119        <meta-data
+119-->[:arcore_client] C:\dev\frontend\starter-kit\node_modules\@reactvision\react-viro\android\arcore_client\build\.transforms\a84cd0732a118e1b7768cd3ae57200c6\transformed\jetified-core-1.43.0\AndroidManifest.xml:32:9-34:41
+120            android:name="com.google.ar.core.min_apk_version"
+120-->[:arcore_client] C:\dev\frontend\starter-kit\node_modules\@reactvision\react-viro\android\arcore_client\build\.transforms\a84cd0732a118e1b7768cd3ae57200c6\transformed\jetified-core-1.43.0\AndroidManifest.xml:33:13-62
+121            android:value="240350000" /> <!-- This activity is critical for installing ARCore when it is not already present. -->
+121-->[:arcore_client] C:\dev\frontend\starter-kit\node_modules\@reactvision\react-viro\android\arcore_client\build\.transforms\a84cd0732a118e1b7768cd3ae57200c6\transformed\jetified-core-1.43.0\AndroidManifest.xml:34:13-38
+122        <activity
+122-->[:arcore_client] C:\dev\frontend\starter-kit\node_modules\@reactvision\react-viro\android\arcore_client\build\.transforms\a84cd0732a118e1b7768cd3ae57200c6\transformed\jetified-core-1.43.0\AndroidManifest.xml:36:9-42:80
+123            android:name="com.google.ar.core.InstallActivity"
+123-->[:arcore_client] C:\dev\frontend\starter-kit\node_modules\@reactvision\react-viro\android\arcore_client\build\.transforms\a84cd0732a118e1b7768cd3ae57200c6\transformed\jetified-core-1.43.0\AndroidManifest.xml:37:13-62
+124            android:configChanges="keyboardHidden|orientation|screenSize"
+124-->[:arcore_client] C:\dev\frontend\starter-kit\node_modules\@reactvision\react-viro\android\arcore_client\build\.transforms\a84cd0732a118e1b7768cd3ae57200c6\transformed\jetified-core-1.43.0\AndroidManifest.xml:38:13-74
+125            android:excludeFromRecents="true"
+125-->[:arcore_client] C:\dev\frontend\starter-kit\node_modules\@reactvision\react-viro\android\arcore_client\build\.transforms\a84cd0732a118e1b7768cd3ae57200c6\transformed\jetified-core-1.43.0\AndroidManifest.xml:39:13-46
+126            android:exported="false"
+126-->[:arcore_client] C:\dev\frontend\starter-kit\node_modules\@reactvision\react-viro\android\arcore_client\build\.transforms\a84cd0732a118e1b7768cd3ae57200c6\transformed\jetified-core-1.43.0\AndroidManifest.xml:40:13-37
+127            android:launchMode="singleTop"
+127-->[:arcore_client] C:\dev\frontend\starter-kit\node_modules\@reactvision\react-viro\android\arcore_client\build\.transforms\a84cd0732a118e1b7768cd3ae57200c6\transformed\jetified-core-1.43.0\AndroidManifest.xml:41:13-43
+128            android:theme="@android:style/Theme.Material.Light.Dialog.Alert" />
+128-->[:arcore_client] C:\dev\frontend\starter-kit\node_modules\@reactvision\react-viro\android\arcore_client\build\.transforms\a84cd0732a118e1b7768cd3ae57200c6\transformed\jetified-core-1.43.0\AndroidManifest.xml:42:13-77
+129
+130        <uses-library
+130-->[androidx.camera:camera-extensions:1.1.0] C:\Users\kanee\.gradle\caches\transforms-3\a2cf35269fb09d435935fa8cc9596b1b\transformed\jetified-camera-extensions-1.1.0\AndroidManifest.xml:31:9-33:40
+131            android:name="androidx.camera.extensions.impl"
+131-->[androidx.camera:camera-extensions:1.1.0] C:\Users\kanee\.gradle\caches\transforms-3\a2cf35269fb09d435935fa8cc9596b1b\transformed\jetified-camera-extensions-1.1.0\AndroidManifest.xml:32:13-59
+132            android:required="false" />
+132-->[androidx.camera:camera-extensions:1.1.0] C:\Users\kanee\.gradle\caches\transforms-3\a2cf35269fb09d435935fa8cc9596b1b\transformed\jetified-camera-extensions-1.1.0\AndroidManifest.xml:33:13-37
+133
+134        <service
+134-->[androidx.camera:camera-camera2:1.1.0] C:\Users\kanee\.gradle\caches\transforms-3\ea77a2ec8fcd88a721f5a2c7d7ff4777\transformed\jetified-camera-camera2-1.1.0\AndroidManifest.xml:26:9-35:19
+135            android:name="androidx.camera.core.impl.MetadataHolderService"
+135-->[androidx.camera:camera-camera2:1.1.0] C:\Users\kanee\.gradle\caches\transforms-3\ea77a2ec8fcd88a721f5a2c7d7ff4777\transformed\jetified-camera-camera2-1.1.0\AndroidManifest.xml:27:13-75
+136            android:enabled="false"
+136-->[androidx.camera:camera-camera2:1.1.0] C:\Users\kanee\.gradle\caches\transforms-3\ea77a2ec8fcd88a721f5a2c7d7ff4777\transformed\jetified-camera-camera2-1.1.0\AndroidManifest.xml:28:13-36
+137            android:exported="false" >
+137-->[androidx.camera:camera-camera2:1.1.0] C:\Users\kanee\.gradle\caches\transforms-3\ea77a2ec8fcd88a721f5a2c7d7ff4777\transformed\jetified-camera-camera2-1.1.0\AndroidManifest.xml:29:13-37
+138            <meta-data
+138-->[androidx.camera:camera-camera2:1.1.0] C:\Users\kanee\.gradle\caches\transforms-3\ea77a2ec8fcd88a721f5a2c7d7ff4777\transformed\jetified-camera-camera2-1.1.0\AndroidManifest.xml:32:13-34:89
+139                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
+139-->[androidx.camera:camera-camera2:1.1.0] C:\Users\kanee\.gradle\caches\transforms-3\ea77a2ec8fcd88a721f5a2c7d7ff4777\transformed\jetified-camera-camera2-1.1.0\AndroidManifest.xml:33:17-103
+140                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
+140-->[androidx.camera:camera-camera2:1.1.0] C:\Users\kanee\.gradle\caches\transforms-3\ea77a2ec8fcd88a721f5a2c7d7ff4777\transformed\jetified-camera-camera2-1.1.0\AndroidManifest.xml:34:17-86
+141        </service>
+142
+143        <provider
+143-->[androidx.emoji2:emoji2:1.2.0] C:\Users\kanee\.gradle\caches\transforms-3\faa3592d2fc203d6c74b9a5f601058a1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+144            android:name="androidx.startup.InitializationProvider"
+144-->[androidx.emoji2:emoji2:1.2.0] C:\Users\kanee\.gradle\caches\transforms-3\faa3592d2fc203d6c74b9a5f601058a1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+145            android:authorities="com.virostarterkit.androidx-startup"
+145-->[androidx.emoji2:emoji2:1.2.0] C:\Users\kanee\.gradle\caches\transforms-3\faa3592d2fc203d6c74b9a5f601058a1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+146            android:exported="false" >
+146-->[androidx.emoji2:emoji2:1.2.0] C:\Users\kanee\.gradle\caches\transforms-3\faa3592d2fc203d6c74b9a5f601058a1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+147            <meta-data
+147-->[androidx.emoji2:emoji2:1.2.0] C:\Users\kanee\.gradle\caches\transforms-3\faa3592d2fc203d6c74b9a5f601058a1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+148                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+148-->[androidx.emoji2:emoji2:1.2.0] C:\Users\kanee\.gradle\caches\transforms-3\faa3592d2fc203d6c74b9a5f601058a1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+149                android:value="androidx.startup" />
+149-->[androidx.emoji2:emoji2:1.2.0] C:\Users\kanee\.gradle\caches\transforms-3\faa3592d2fc203d6c74b9a5f601058a1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+150            <meta-data
+150-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\kanee\.gradle\caches\transforms-3\71b91ea8216105cda74b0317da307340\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+151                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+151-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\kanee\.gradle\caches\transforms-3\71b91ea8216105cda74b0317da307340\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+152                android:value="androidx.startup" />
+152-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\kanee\.gradle\caches\transforms-3\71b91ea8216105cda74b0317da307340\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+153        </provider>
+154
+155        <meta-data
+155-->[com.facebook.soloader:soloader:0.10.5] C:\Users\kanee\.gradle\caches\transforms-3\03d018e18e7118763cc731de8f689ba0\transformed\jetified-soloader-0.10.5\AndroidManifest.xml:12:9-14:37
+156            android:name="com.facebook.soloader.enabled"
+156-->[com.facebook.soloader:soloader:0.10.5] C:\Users\kanee\.gradle\caches\transforms-3\03d018e18e7118763cc731de8f689ba0\transformed\jetified-soloader-0.10.5\AndroidManifest.xml:13:13-57
+157            android:value="false" />
+157-->[com.facebook.soloader:soloader:0.10.5] C:\Users\kanee\.gradle\caches\transforms-3\03d018e18e7118763cc731de8f689ba0\transformed\jetified-soloader-0.10.5\AndroidManifest.xml:14:13-34
+158    </application>
+159
+160</manifest>

@@ -1,0 +1,176 @@
+
+=== Validation Results ===
+Accuracy: 0.2258
+Classification Report:
+              precision    recall  f1-score   support
+
+      nature       0.00      0.00      0.00        17
+     history       0.00      0.00      0.00        18
+   adventure       0.21      1.00      0.35        18
+       urban       0.00      0.00      0.00        22
+   spiritual       0.43      0.17      0.24        18
+
+    accuracy                           0.23        93
+   macro avg       0.13      0.23      0.12        93
+weighted avg       0.12      0.23      0.11        93
+
+
+=== Validation Results ===
+Accuracy: 0.3226
+Classification Report:
+              precision    recall  f1-score   support
+
+      nature       0.00      0.00      0.00        17
+     history       0.00      0.00      0.00        18
+   adventure       0.38      0.78      0.51        18
+       urban       0.00      0.00      0.00        22
+   spiritual       0.29      0.89      0.43        18
+
+    accuracy                           0.32        93
+   macro avg       0.13      0.33      0.19        93
+weighted avg       0.13      0.32      0.18        93
+
+
+=== Validation Results ===
+Accuracy: 0.4301
+Classification Report:
+              precision    recall  f1-score   support
+
+      nature       0.67      0.24      0.35        17
+     history       0.40      0.44      0.42        18
+   adventure       0.62      0.56      0.59        18
+       urban       0.35      0.27      0.31        22
+   spiritual       0.35      0.67      0.46        18
+
+    accuracy                           0.43        93
+   macro avg       0.48      0.43      0.43        93
+weighted avg       0.47      0.43      0.42        93
+
+
+=== Validation Results ===
+Accuracy: 0.3011
+Classification Report:
+              precision    recall  f1-score   support
+
+      nature       0.27      0.76      0.40        17
+     history       0.00      0.00      0.00        18
+   adventure       0.33      0.83      0.48        18
+       urban       0.00      0.00      0.00        22
+   spiritual       0.00      0.00      0.00        18
+
+    accuracy                           0.30        93
+   macro avg       0.12      0.32      0.18        93
+weighted avg       0.11      0.30      0.17        93
+
+
+=== Validation Results ===
+Accuracy: 0.3333
+Classification Report:
+              precision    recall  f1-score   support
+
+      nature       0.00      0.00      0.00        17
+     history       0.40      0.56      0.47        18
+   adventure       1.00      0.06      0.11        18
+       urban       0.30      0.14      0.19        22
+   spiritual       0.30      0.94      0.45        18
+
+    accuracy                           0.33        93
+   macro avg       0.40      0.34      0.24        93
+weighted avg       0.40      0.33      0.24        93
+
+
+=== Validation Results ===
+Accuracy: 0.3333
+Classification Report:
+              precision    recall  f1-score   support
+
+      nature       0.00      0.00      0.00        17
+     history       0.35      0.94      0.52        18
+   adventure       0.00      0.00      0.00        18
+       urban       0.00      0.00      0.00        22
+   spiritual       0.31      0.78      0.44        18
+
+    accuracy                           0.33        93
+   macro avg       0.13      0.34      0.19        93
+weighted avg       0.13      0.33      0.19        93
+
+
+=== Validation Results ===
+Accuracy: 0.4516
+Classification Report:
+              precision    recall  f1-score   support
+
+      nature       0.33      0.35      0.34        17
+     history       0.45      0.94      0.61        18
+   adventure       0.92      0.61      0.73        18
+       urban       0.24      0.23      0.23        22
+   spiritual       0.75      0.17      0.27        18
+
+    accuracy                           0.45        93
+   macro avg       0.54      0.46      0.44        93
+weighted avg       0.53      0.45      0.43        93
+
+
+=== Validation Results ===
+Accuracy: 0.3226
+Classification Report:
+              precision    recall  f1-score   support
+
+      nature       0.26      0.71      0.38        17
+     history       0.25      0.06      0.09        18
+   adventure       0.41      0.72      0.52        18
+       urban       0.25      0.09      0.13        22
+   spiritual       0.67      0.11      0.19        18
+
+    accuracy                           0.32        93
+   macro avg       0.37      0.34      0.26        93
+weighted avg       0.36      0.32      0.26        93
+
+
+=== Validation Results ===
+Accuracy: 0.4194
+Classification Report:
+              precision    recall  f1-score   support
+
+      nature       0.28      0.65      0.39        17
+     history       0.50      0.17      0.25        18
+   adventure       0.52      0.78      0.62        18
+       urban       0.50      0.18      0.27        22
+   spiritual       0.58      0.39      0.47        18
+
+    accuracy                           0.42        93
+   macro avg       0.48      0.43      0.40        93
+weighted avg       0.48      0.42      0.39        93
+
+
+=== Validation Results ===
+Accuracy: 0.4731
+Classification Report:
+              precision    recall  f1-score   support
+
+      nature       0.75      0.18      0.29        17
+     history       0.52      0.67      0.59        18
+   adventure       0.89      0.44      0.59        18
+       urban       0.26      0.27      0.27        22
+   spiritual       0.44      0.83      0.58        18
+
+    accuracy                           0.47        93
+   macro avg       0.57      0.48      0.46        93
+weighted avg       0.56      0.47      0.45        93
+
+
+=== Test Results ===
+Accuracy: 0.4731
+Classification Report:
+              precision    recall  f1-score   support
+
+      nature       0.75      0.18      0.29        17
+     history       0.52      0.67      0.59        18
+   adventure       0.89      0.44      0.59        18
+       urban       0.26      0.27      0.27        22
+   spiritual       0.44      0.83      0.58        18
+
+    accuracy                           0.47        93
+   macro avg       0.57      0.48      0.46        93
+weighted avg       0.56      0.47      0.45        93
+

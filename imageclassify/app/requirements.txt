@@ -1,6 +1,9 @@
-torch
-torchvision
 flask
 flask-cors
+torch
+torchvision
+Pillow
 numpy
-pillow
+clip
+requests
+google-generativeai

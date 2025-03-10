@@ -1,0 +1,32 @@
+
+=== Validation Results ===
+Accuracy: 0.0000
+Classification Report:
+              precision    recall  f1-score   support
+
+      nature       0.00      0.00      0.00      17.0
+     history       0.00      0.00      0.00      18.0
+   adventure       0.00      0.00      0.00      18.0
+       urban       0.00      0.00      0.00      22.0
+   spiritual       0.00      0.00      0.00      18.0
+
+    accuracy                           0.00      93.0
+   macro avg       0.00      0.00      0.00      93.0
+weighted avg       0.00      0.00      0.00      93.0
+
+
+=== Test Results ===
+Accuracy: 0.0000
+Classification Report:
+              precision    recall  f1-score   support
+
+      nature       0.00      0.00      0.00      17.0
+     history       0.00      0.00      0.00      18.0
+   adventure       0.00      0.00      0.00      18.0
+       urban       0.00      0.00      0.00      22.0
+   spiritual       0.00      0.00      0.00      18.0
+
+    accuracy                           0.00      93.0
+   macro avg       0.00      0.00      0.00      93.0
+weighted avg       0.00      0.00      0.00      93.0
+

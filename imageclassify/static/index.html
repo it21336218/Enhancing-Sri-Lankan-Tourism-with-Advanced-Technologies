@@ -1,29 +1,218 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Image Classification</title>
-</head>
-<body>
-    <h1>Upload an Image</h1>
-    <form id="uploadForm">
-        <input type="file" id="image" name="file" accept="image/*" required>
-        <button type="submit">Classify</button>
-    </form>
-    <p id="result"></p>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Classification & Get Details</title>
 
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom Styles -->
+    <style>
+      body {
+        background: linear-gradient(to right, #f8fafc, #cce7ff);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .card {
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin-bottom: 20px;
+      }
+
+      .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+      }
+
+      .btn-primary:hover {
+        background-color: #0056b3;
+      }
+
+      .result-text {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #007bff;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Image Classification Card -->
+      <div class="card p-4 mt-5" style="max-width: 500px; margin: auto">
+        <h1 class="text-center text-primary mb-4">Image Classification</h1>
+        <form id="uploadForm" class="text-center">
+          <div class="mb-3">
+            <input
+              type="file"
+              id="image"
+              name="file"
+              accept="image/*"
+              required
+              class="form-control"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg">
+            Classify Image
+          </button>
+        </form>
+        <p id="classificationResult" class="text-center mt-3 result-text"></p>
+      </div>
+
+      <!-- Get Details Card -->
+      <div class="card p-4 mt-5" style="max-width: 500px; margin: auto">
+        <h1 class="text-center text-primary mb-4">Get Location Details</h1>
+        <form id="detailsForm" class="text-center">
+          <div class="mb-3">
+            <input
+              type="text"
+              id="latitudeDMS"
+              placeholder="Latitude (e.g., 8°21′0″N)"
+              class="form-control"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <input
+              type="text"
+              id="longitudeDMS"
+              placeholder="Longitude (e.g., 80°23′47″E)"
+              class="form-control"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <input
+              type="file"
+              id="detailsImage"
+              name="file"
+              accept="image/*"
+              required
+              class="form-control"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg">
+            Get Details
+          </button>
+        </form>
+        <div id="detailsResult" class="text-center mt-3">
+          <p class="result-text" id="history"></p>
+          <p class="result-text" id="geography"></p>
+          <p class="result-text" id="culture"></p>
+          <p class="result-text" id="imageAnalysis"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom Script -->
     <script>
-        const form = document.getElementById('uploadForm');
-        form.onsubmit = async (e) => {
-            e.preventDefault();
-            const formData = new FormData();
-            formData.append('file', document.getElementById('image').files[0]);
-            const response = await fetch('http://127.0.0.1:5000/classify', {
-                method: 'POST',
-                body: formData
-            });
-            const result = await response.json();
-            document.getElementById('result').innerText = `Category: ${result.category}`;
-        };
+      // Function to convert DMS to decimal degrees
+      function dmsToDecimal(dms) {
+        dms = dms
+          .replace(/′/g, "'") // Replace prime symbol (′) with single quote (')
+          .replace(/″/g, '"') // Replace double prime symbol (″) with double quote (")
+          .replace(/''/g, '"') // Replace double single quotes ('') with double quote (")
+          .trim();
+
+        const regex =
+          /^\s*(\d+)[°\s]+(\d+)[\'\s]+([\d.]+)?[\"\s]*([NSEW])\s*$/i;
+        const match = dms.match(regex);
+
+        if (!match) {
+          alert(
+            "Invalid DMS format. Please use the format: 8°21′0″N or 80°23′47″E"
+          );
+          throw new Error("Invalid DMS format.");
+        }
+
+        const degrees = parseFloat(match[1]);
+        const minutes = parseFloat(match[2]) / 60;
+        const seconds = parseFloat(match[3]) / 3600;
+        const direction = match[4];
+
+        let decimal = degrees + minutes + seconds;
+        if (direction === "S" || direction === "W") {
+          decimal *= -1;
+        }
+
+        return decimal;
+      }
+
+      // Image Classification Form
+      const uploadForm = document.getElementById("uploadForm");
+      uploadForm.onsubmit = async (e) => {
+        e.preventDefault();
+        const formData = new FormData();
+        formData.append("file", document.getElementById("image").files[0]);
+
+        const response = await fetch("http://127.0.0.1:5000/classify", {
+          method: "POST",
+          body: formData,
+        });
+
+        const result = await response.json();
+        document.getElementById(
+          "classificationResult"
+        ).innerText = `Category: ${result.category}`;
+      };
+
+      // Get Details Form
+      const detailsForm = document.getElementById("detailsForm");
+      detailsForm.onsubmit = async (e) => {
+        e.preventDefault();
+
+        // Get and convert DMS inputs to decimal degrees
+        const latitudeDMS = document.getElementById("latitudeDMS").value;
+        const longitudeDMS = document.getElementById("longitudeDMS").value;
+        const latitude = dmsToDecimal(latitudeDMS);
+        const longitude = dmsToDecimal(longitudeDMS);
+
+        const formData = new FormData();
+        formData.append(
+          "file",
+          document.getElementById("detailsImage").files[0]
+        );
+        formData.append(
+          "geo_location",
+          JSON.stringify({ latitude, longitude })
+        ); // Send geo_location as a string
+
+        try {
+          const response = await fetch("http://127.0.0.1:5000/get-details", {
+            method: "POST",
+            body: formData,
+          });
+
+          if (!response.ok) {
+            const errorData = await response.json();
+            console.error("Error:", errorData);
+            alert(`Error: ${errorData.error}`);
+            return;
+          }
+
+          const result = await response.json();
+          console.log("Response:", result);
+
+          document.getElementById(
+            "history"
+          ).innerText = `${result.location_details.description}`;
+        } catch (error) {
+          console.error("Request failed:", error);
+          alert("An error occurred. Check the console for details.");
+        }
+      };
     </script>
-</body>
+  </body>
 </html>
