@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { View, StyleSheet, PermissionsAndroid, Platform } from "react-native";
 import LoadingScreen from "./components/LoadingScreen";
-import MainScreen from "./screens/MainScreen"; // Ensure this exists in 'screens' folder
+import MainScreen from "./screens/MainScreen";
+import LocationFetchManager from "./components/LocationFetchManager"; // Import Background Task
 
 export default function App() {
   const [hasPermissions, setHasPermissions] = useState<boolean | null>(null);
@@ -13,17 +14,19 @@ export default function App() {
         let locationGranted = false;
 
         if (Platform.OS === "android") {
-          cameraGranted = await PermissionsAndroid.request(
-            PermissionsAndroid.PERMISSIONS.CAMERA
-          ) === PermissionsAndroid.RESULTS.GRANTED;
+          cameraGranted =
+            (await PermissionsAndroid.request(
+              PermissionsAndroid.PERMISSIONS.CAMERA
+            )) === PermissionsAndroid.RESULTS.GRANTED;
 
-          locationGranted = await PermissionsAndroid.request(
-            PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION
-          ) === PermissionsAndroid.RESULTS.GRANTED;
+          locationGranted =
+            (await PermissionsAndroid.request(
+              PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION
+            )) === PermissionsAndroid.RESULTS.GRANTED;
         } else {
-          // iOS uses React Native's permission library or handles it differently
-          cameraGranted = true; // Assume granted for now
-          locationGranted = true; // Assume granted for now
+          // iOS assumes permission is granted for now
+          cameraGranted = true;
+          locationGranted = true;
         }
 
         setHasPermissions(cameraGranted && locationGranted);
@@ -40,8 +43,17 @@ export default function App() {
     return <LoadingScreen />; // Show loading screen while checking permissions
   }
 
-  return hasPermissions ? <MainScreen /> : <LoadingScreen />;
+  return (
+    <View style={styles.container}>
+      {/* ✅ Background Fetch Component - Runs in Background */}
+      {hasPermissions && <LocationFetchManager />}
+      
+      {/* ✅ Main App Screen */}
+      {hasPermissions ? <MainScreen /> : <LoadingScreen />}
+    </View>
+  );
 }
+
 
 const styles = StyleSheet.create({
   container: {
@@ -51,3 +63,4 @@ const styles = StyleSheet.create({
     backgroundColor: "#FFFF",
   },
 });
+

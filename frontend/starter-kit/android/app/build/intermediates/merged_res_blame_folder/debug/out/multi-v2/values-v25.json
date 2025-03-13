@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.virostarterkit.app-mergeDebugResources-35:/values-v25/values-v25.xml",
+            "outputFile": "com.virostarterkit.app-mergeDebugResources-37:/values-v25/values-v25.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\kanee\\.gradle\\caches\\transforms-3\\b3627ca143232ec2ceb6e319eb18971d\\transformed\\appcompat-1.6.1\\res\\values-v25\\values-v25.xml",
+                    "source": "C:\\Users\\kanee\\.gradle\\caches\\transforms-3\\fd32cf51ff8c3a27ba0c13074b43ff9b\\transformed\\appcompat-1.6.1\\res\\values-v25\\values-v25.xml",
                     "from": {
                         "startLines": "2,3,4,6",
                         "startColumns": "4,4,4,4",

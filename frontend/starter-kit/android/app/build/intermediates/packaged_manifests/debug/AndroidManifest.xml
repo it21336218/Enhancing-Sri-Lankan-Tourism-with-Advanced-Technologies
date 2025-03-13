@@ -40,17 +40,21 @@
         android:required="true" />
     <uses-feature android:name="android.hardware.camera.ar" />
     <uses-feature android:name="android.hardware.location.gps" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
     <!--
     This manifest file is used only by Gradle to configure debug-only capabilities
     for React Native Apps.
     -->
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <meta-data
         android:name="com.google.ar.core"
-        android:value="optional" /> <!-- Required for vibration feedback when the trigger action is performed. -->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+        android:value="optional" />
+
     <uses-permission android:name="android.permission.VIBRATE" /> <!-- Required for Recording -->
     <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- Required to detect viewer insertion. -->
     <uses-permission android:name="android.permission.NFC" /> <!-- Indicates use of Android's VR-mode, available only on Android N+. -->
@@ -66,6 +70,11 @@
         android:protectionLevel="signature" />
 
     <uses-permission android:name="com.virostarterkit.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission
+        android:name="android.permission.SCHEDULE_EXACT_ALARM"
+        android:maxSdkVersion="33" />
 
     <application
         android:name="com.virostarterkit.MainApplication"
@@ -155,6 +164,24 @@
         <meta-data
             android:name="com.facebook.soloader.enabled"
             android:value="false" />
+
+        <receiver
+            android:name="com.transistorsoft.tsbackgroundfetch.FetchAlarmReceiver"
+            android:exported="false" />
+
+        <service
+            android:name="com.transistorsoft.tsbackgroundfetch.FetchJobService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <receiver
+            android:name="com.transistorsoft.tsbackgroundfetch.BootReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

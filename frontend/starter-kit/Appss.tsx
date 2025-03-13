@@ -9,7 +9,7 @@ import { Camera, useCameraDevices } from "react-native-vision-camera";
 // ✅ Adjust the path to your icon
 const bookIcon = require("./res/images/book_icon.png");
 
-const Appps = () => {
+const Appss = () => {
   const [hasPermissions, setHasPermissions] = useState(false);
   
   const [loading, setLoading] = useState(true);
