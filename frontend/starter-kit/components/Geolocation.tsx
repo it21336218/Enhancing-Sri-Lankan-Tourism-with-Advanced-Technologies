@@ -25,7 +25,7 @@ export const requestLocationPermission = async (): Promise<boolean> => {
       return false;
     }
   }
-  return true; // Assume iOS permission is handled separately
+  return true;
 };
 
 // ✅ Get current location (Only if permission granted)

@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useMemo } from "react";
 import { 
   ViroARScene, 
   Viro3DObject, 
@@ -22,7 +22,21 @@ const ARScene = ({ imagePath }: { imagePath: string }) => {
   });
 
   const [isPlaced, setIsPlaced] = useState(false); // Lock placement once found
-  const arNodeRef = useRef(null); // Prevent unnecessary updates
+  const arNodeRef = useRef(null);
+
+  // Lazy-load and memoize the heavy asset files
+  const modelSource = useMemo(
+    () =>
+      require("../res/A_clean_3D_banner_wit_1203163049_texture_obj/A_clean_3D_banner_wit_1203163049_texture.obj"),
+    []
+  );
+  const modelResources = useMemo(
+    () => [
+      require("../res/A_clean_3D_banner_wit_1203163049_texture_obj/A_clean_3D_banner_wit_1203163049_texture.mtl"),
+      require("../res/A_clean_3D_banner_wit_1203163049_texture_obj/A_clean_3D_banner_wit_1203163049_texture.png"),
+    ],
+    []
+  );
 
   useEffect(() => {
     const fetchData = async () => {
@@ -56,7 +70,7 @@ const ARScene = ({ imagePath }: { imagePath: string }) => {
       {/* Ambient lighting for better visibility */}
       <ViroAmbientLight color="#FFFFFF" intensity={300} />
 
-      {/* ✅ Detect and place banner only once to prevent lag */}
+      {/* Detect and place banner only once to prevent lag */}
       {!isPlaced ? (
         <ViroARPlaneSelector
           onPlaneSelected={() => setIsPlaced(true)} // Lock placement
@@ -67,11 +81,8 @@ const ARScene = ({ imagePath }: { imagePath: string }) => {
           <ViroNode ref={arNodeRef} position={[0, 0, 0]} rotation={[0, 0, 0]}>
             {/* 3D Banner Object */}
             <Viro3DObject
-              source={require("../res/A_clean_3D_banner_wit_1203163049_texture_obj/A_clean_3D_banner_wit_1203163049_texture.obj")}
-              resources={[
-                require("../res/A_clean_3D_banner_wit_1203163049_texture_obj/A_clean_3D_banner_wit_1203163049_texture.mtl"),
-                require("../res/A_clean_3D_banner_wit_1203163049_texture_obj/A_clean_3D_banner_wit_1203163049_texture.png"),
-              ]}
+              source={modelSource}
+              resources={modelResources}
               position={[0, 0, 0]}
               scale={[0.6, 0.6, 0.6]}
               type="OBJ"
@@ -86,7 +97,7 @@ const ARScene = ({ imagePath }: { imagePath: string }) => {
               scale={[0.2, 0.2, 0.2]}
               style={{
                 fontSize: 28,
-                color: "#FFD700", // Gold color for title
+                color: "#FFD700",
                 textAlign: "center",
                 fontWeight: "bold",
               }}
@@ -111,11 +122,8 @@ const ARScene = ({ imagePath }: { imagePath: string }) => {
         <ViroNode ref={arNodeRef} position={[0, 0, 0]} rotation={[0, 0, 0]}>
           {/* Banner stays locked after placement */}
           <Viro3DObject
-            source={require("../res/A_clean_3D_banner_wit_1203163049_texture_obj/A_clean_3D_banner_wit_1203163049_texture.obj")}
-            resources={[
-              require("../res/A_clean_3D_banner_wit_1203163049_texture_obj/A_clean_3D_banner_wit_1203163049_texture.mtl"),
-              require("../res/A_clean_3D_banner_wit_1203163049_texture_obj/A_clean_3D_banner_wit_1203163049_texture.png"),
-            ]}
+            source={modelSource}
+            resources={modelResources}
             position={[0, 0, 0]}
             scale={[0.6, 0.6, 0.6]}
             type="OBJ"
