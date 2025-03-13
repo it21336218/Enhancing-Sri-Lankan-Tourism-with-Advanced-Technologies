@@ -96,7 +96,7 @@ const LocationFetchManager = () => {
     // Background Fetch for improved efficiency
     BackgroundFetch.configure(
       {
-        minimumFetchInterval: 15, // Check every 15 mins in the background
+        minimumFetchInterval: 1, 
         stopOnTerminate: false,
         enableHeadless: true,
       },
